@@ -1,0 +1,13 @@
+//Mostrar el carácter ASCII
+
+#include <stdio.h>
+
+int main(){
+    int Num;
+    
+    printf("Bienvenido al programa que muestra su numero entero en ASCII\n");
+    printf("Para comenzar, ingrese un numero del 0 al 127: \n");
+    scanf("%d", &Num);
+    
+    printf("El caracter en ASCII es: %c", (char)Num);
+}
