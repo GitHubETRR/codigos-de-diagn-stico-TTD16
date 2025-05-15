@@ -1,0 +1,14 @@
+//Suma de enteros
+
+#include <stdio.h>
+
+int main(){
+    int num1, num2, suma;
+    printf("Bienvenido al programa que suma dos numeros enteros\n");
+    printf("Para continuar, ingrese 2 numeros enteros: \n");
+    scanf("%d %d", &num1, &num2);
+    
+    suma = num1 + num2;
+    
+    printf("Su suma es de %d", suma);
+}
