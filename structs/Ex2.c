@@ -5,7 +5,18 @@ struct Persona{
     int edad;
     float altura;
 };
+void cargarpersonas();
+void mostrarpersonas();
 
+int main(){
+    int cantidad;
+    printf("Bienvenido, ingrese cuantas personas quiere ingresar: ");
+    scanf("%d", &cantidad);
+    struct Persona personas[cantidad];    
+
+    cargarpersonas(personas, cantidad);
+    mostrarpersonas(personas, cantidad);
+}
 void cargarpersonas(struct Persona p[], int cantidad){
     for(int i=0; i<cantidad; i++){
         printf("\n--Persona %d---\n", i+1);
@@ -25,13 +36,4 @@ void mostrarpersonas(struct Persona p[], int cantidad){
         printf("Edad: %d\n", p[i].edad);
         printf("Altura: %f\n", p[i].altura);
     }
-}
-int main(){
-    int cantidad;
-    printf("Bienvenido, ingrese cuantas personas quiere ingresar: ");
-    scanf("%d", &cantidad);
-    struct Persona personas[cantidad];    
-
-    cargarpersonas(personas, cantidad);
-    mostrarpersonas(personas, cantidad);
 }
