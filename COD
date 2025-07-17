@@ -1,0 +1,105 @@
+#include <iostream>
+using namespace std;
+
+class menu{
+    private:
+        string user_name;
+        int level;
+    
+    public:
+        
+        void bienvenida(string name, int l){
+            user_name = name;
+            level = l;
+            cout << "Bienvenido de nuevo " << name << ", tu nivel actual es " << l << endl;
+        }
+        
+        void mission2(){
+            int mission, map, mode;
+            cout << "---Menu---\n" << "1-Estandar\n" << "2-Guiado\n" << "3-Agonia\n" << "4-Modo abominación" << endl;
+            cin >> mission;
+            switch(mission){
+                case 1: cout << "---Mapa---\n" << "1-Shattered evil\n" << "2-The tomb\n" << "3-Citadelle des morts\n" << "4-Terminus\n" << "5-Liberty falls" << endl;
+                        cin >> map;
+                        switch(map){
+                            case 1: cout << "---Modo---\n" << "1-En pelotón\n" << "2-Individual" << endl;
+                                    cin >> mode;
+                                    cout << "Cargando partida en Shattered evil..." << endl;
+                                    break;
+                            
+                            case 2: cout << "---Modo---\n" << "1-En pelotón\n" << "2-Individual" << endl;
+                                    cin >> mode;
+                                    cout << "Cargando partida en The tomb..." << endl;
+                                    break;
+                                    
+                            case 3: cout << "---Modo---\n" << "1-En pelotón\n" << "2-Individual" << endl;
+                                    cin >> mode;
+                                    cout << "Cargando partida en Citadelle des morts..." << endl;
+                                    break;
+                                    
+                            case 4: cout << "---Modo---\n" << "1-En pelotón\n" << "2-Individual" << endl;
+                                    cin >> mode;
+                                    cout << "Cargando partida en Terminus..." << endl;
+                                    break;
+                            
+                            case 5: cout << "---Modo---\n" << "1-En pelotón\n" << "2-Individual" << endl;
+                                    cin >> mode;
+                                    cout << "Cargando partida en liberty falls..." << endl;
+                                    break;
+                            
+                            default: cout << "No eligio ningun mapa, reiniciando..." << endl;
+                                     break;
+                        }
+                        break;
+
+                case 2: cout << "---Mapa---\n" << "1-Shattered evil\n" << "2-The tomb\n" << "3-Citadelle des morts\n" << "4-Terminus\n" << "5-Liberty falls" << endl;
+                        cin >> map;
+                        switch(map){
+                            case 1: cout << "---Modo---\n" << "1-En pelotón\n" << "2-Individual" << endl;
+                                    cin >> mode;
+                                    cout << "Cargando partida en Shattered evil..." << endl;
+                                    break;
+                            
+                            case 2: cout << "---Modo---\n" << "1-En pelotón\n" << "2-Individual" << endl;
+                                    cin >> mode;
+                                    cout << "Cargando partida en The tomb..." << endl;
+                                    break;
+                                    
+                            case 3: cout << "---Modo---\n" << "1-En pelotón\n" << "2-Individual" << endl;
+                                    cin >> mode;
+                                    cout << "Cargando partida en Citadelle des morts..." << endl;
+                                    break;
+                                    
+                            case 4: cout << "---Modo---\n" << "1-En pelotón\n" << "2-Individual" << endl;
+                                    cin >> mode;
+                                    cout << "Cargando partida en Terminus..." << endl;
+                                    break;
+                            
+                            case 5: cout << "---Modo---\n" << "1-En pelotón\n" << "2-Individual" << endl;
+                                    cin >> mode;
+                                    cout << "Cargando partida en liberty falls..." << endl;
+                                    break;
+                            
+                            default: cout << "No eligio ningun mapa, reiniciando..." << endl;
+                                     break;
+                        }
+                        break;
+            
+                case 3: cout << "Cargando mapa aleatorio en Agonia..." << endl;
+                        break;
+                
+                case 4: cout << "Cargando Librety falls con Moe..." << endl;
+                        break;
+                
+                default: cout << "No eligio ningun mapa disponible, reiniciando..." << endl;
+                         break;
+            }
+        }
+};
+
+int main(){
+    menu m1;
+    m1.bienvenida("Thiago", 21);
+    m1.mission2();
+    return 0;
+}
