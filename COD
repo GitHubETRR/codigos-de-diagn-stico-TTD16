@@ -64,7 +64,7 @@ public:
 
 int main() {
     menu m1;
-    m1.bienvenida("Thiago", 21);
+    m1.bienvenida("User", 202);
     m1.mission2();
     return 0;
 }
