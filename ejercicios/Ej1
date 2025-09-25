@@ -1,0 +1,26 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main (){
+    float mat[3][4];
+    for (int i=0; i<3; i++){
+        for(int j=0; j<4; j++){
+            cout << "Ingrese el número de la fila " << i << " columna " << j << ":" << endl;
+            cin >> mat[i][j];
+        }
+    }
+
+    cout << setfill('~');
+    cout << setprecision(2);
+    cout << showpoint;
+    for(int i=0; i<3; i++){
+        cout << endl << endl << "\t";
+        for(int j=0; j<4; j++)
+            cout << " " << setw(12) << mat[i][j];
+    }
+
+    cout << "\n\n\n\n";
+    getchar();
+    return 0;
+}
