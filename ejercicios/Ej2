@@ -1,0 +1,47 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+#define MAX_CHAR 50
+
+class Persona{
+    private:
+        int edad, dni;
+        char nombre[MAX_CHAR];
+    
+    public:
+        
+        void guarda(int e, int d, const char* n){
+            edad = e;
+            dni = d;
+            strcpy(nombre, n);
+        }
+        
+        void leer_datos(int &e, int &d, char* n){
+            e = edad;
+            d = dni;
+            strcpy(n, nombre);
+        }
+        
+        void mostrar(){
+            cout << "\nNombre: " << nombre << endl;
+            cout << "DNI: " << dni << endl;
+            cout << "Edad: " << edad << endl;
+        }
+};
+
+int main(){
+    Persona p1;
+    int edad, dni;
+    char nombre[MAX_CHAR];
+    
+    cout << "Bienvenido, ingrese sus datos..." << endl;
+    cout << "Nombre: ";
+    cin >> nombre;
+    cout << "Edad: ";
+    cin >> edad;
+    cout << "DNI: ";
+    cin >> dni;
+    
+    p1.guarda(edad, dni, nombre);
+    p1.mostrar();
+}
