@@ -35,7 +35,7 @@ class Coche{
         
         void autos_disponibles(int &e){
             switch(e){
-                case 1: "--AUTOS DISPONIBLES---"
+                case 1: cout << "---AUTOS DISPONIBLES---" << endl;
+                        cout << "1- Mazda 3"
             }
         }
-}
