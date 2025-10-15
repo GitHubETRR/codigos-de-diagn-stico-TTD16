@@ -36,6 +36,14 @@ class Coche{
         void autos_disponibles(int &e){
             switch(e){
                 case 1: cout << "---AUTOS DISPONIBLES---" << endl;
-                        cout << "1- Mazda 3"
+                        cout << "1- Mazda 3" << endl;
+                        cout << "2- Mazda CX-5" << endl;
+                        cout << "3- Mazda MX-5 (Miata)" << endl;
+                        break;
+                        
+                case 2: cout << "---AUTOS DISPONIBLES---" << endl;
+                        cout << "1-Peugeot 208" << endl;
+                        
+                
             }
         }
