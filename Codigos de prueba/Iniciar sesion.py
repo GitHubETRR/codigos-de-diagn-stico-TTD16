@@ -26,8 +26,9 @@ if int(Decision) == 1:
     print("Contraseña:", Contraseña)
 elif int(Decision) == 0:
     Longitud_contraseña = input("Perfecto, ahora ingrese que tan larga sea la contraseña: ")
-    print("Su contraseña sera ", generador_contraseña(Longitud_contraseña))
+    print("\n---USUARIO---")
+    print("Nombre de usuario:", Nombre_usuario)
+    print("Contraseña:", generador_contraseña(int(Longitud_contraseña)))
+    
 else:
     print("No ingreso un 1 ni un 0, reinicie el programa")
-    
-print(generador_contraseña(3))
