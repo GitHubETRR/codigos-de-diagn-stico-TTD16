@@ -22,7 +22,7 @@ void readfile(const string& File, int reading_velocity){
 }
 
 int main() {
-    int decision, a;
+    int decision, a, reading_velocity;
     cout << "---ARC 1---" << endl;
     cout << "1- Prologue" << endl;
     for(int i=1;i<22; i++){
@@ -33,16 +33,22 @@ int main() {
     cin >> decision;
     
     switch(decision){
-        case 1: readfile("prologue.txt", 1000);
+        case 1: cout << "Enter the velocity to read (1 Second = 1000)" << endl;
+                cin >> reading_velocity;
+                readfile("prologue.txt", reading_velocity);
                 break;
         
-        case 23: readfile("interlude.txt", 1000);
+        case 23: cout << "Enter the velocity to read (1 Second = 1000)" << endl;
+                 cin >> reading_velocity;
+                 readfile("interlude.txt", reading_velocity);
                  break;
         
         default:{
+            cout << "Enter the velocity to read between lines (1 Second = 1000)" << endl;
+            cin >> reading_velocity;
             int chapter = decision - 1;
             string chapter_name = "chap" + to_string(chapter) + ".txt";
-            readfile(chapter_name, 1000);
+            readfile(chapter_name, reading_velocity);
             break;
         }
     }
