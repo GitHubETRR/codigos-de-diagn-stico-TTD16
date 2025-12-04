@@ -10,8 +10,8 @@ using namespace std::chrono;
 class Book {
 public:
     struct Chapter {
-        int number;
-        string title;
+        int chapter_number;
+        string chapter_title;
         string filename;
 
         void read(int reading_velocity) const {
@@ -63,16 +63,16 @@ public:
     void showMenu() const {
         cout << "---ARC 1---" << endl;
         for (int i = 0; i < total; i++) {
-            cout << chapters[i].number << "- " << chapters[i].title << endl;
+            cout << chapters[i].chapter_number << "- " << chapters[i].chapter_title << endl;
         }
         cout << endl;
     }
 
     void readChapter(int index, int velocity) const {
-        chapters[index].read(velocity);
+        chapters[index].read(velocity);                 //Index busca el numero del capitulo, .read lee a una velocidad segun velocity
     }
 
-    int getTotal() const { return total; }
+    int getTotal() const { return total; }            //Devuelve el total de capitulos
 };
 
 int main() {
