@@ -1,6 +1,7 @@
 class Estudiante:
-    def __init__(self, nombre):
+    def __init__(self, nombre, legajo):
         self.nombre = nombre
+        self.legajo = legajo
         self.notas = []
 
     def agregar_nota(self, nota):
@@ -29,6 +30,7 @@ class Curso:
             todas_las_notas.extend(est.notas)
 
             print("\nEstudiante:", est.nombre)
+            print("Legajo:", est.legajo)
             print("  Notas:", ordenadas)
             print("  Máxima:", maxima)
             print("  Mínima:", minima)
@@ -45,7 +47,10 @@ cantidad_estudiantes = int(input("¿Cuántos estudiantes vas a ingresar?: "))
 for i in range(cantidad_estudiantes):
     print("\nNombre del estudiante", i + 1, ": ")
     nombre = input()
-    estudiante = Estudiante(nombre)
+    
+    print("Legajo de", nombre, ": ")
+    legajo = int(input(""))
+    estudiante = Estudiante(nombre, legajo)
 
     print("¿Cuántas notas tiene", nombre, "?: ")
     cantidad_notas = int(input())
@@ -54,6 +59,9 @@ for i in range(cantidad_estudiantes):
         nota = int(input("   Ingresa una nota: "))
         estudiante.agregar_nota(nota)
 
+    curso.agregar_estudiante(estudiante)
+
+curso.mostrar_resultados()
     curso.agregar_estudiante(estudiante)
 
 curso.mostrar_resultados()
